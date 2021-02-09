@@ -87,10 +87,10 @@ func getEncoderConfig() (config zapcore.EncoderConfig) {
 		EncodeDuration: zapcore.SecondsDurationEncoder,
 		EncodeCaller:   zapcore.FullCallerEncoder,
 	}
-	switch  {
-	case global.GVA_CONFIG.Zap.EncodeLevel == "LowercaseLevelEncoder" && global.GVA_CONFIG.Zap.Format == "console" : // console小写编码器
+	switch {
+	case global.GVA_CONFIG.Zap.EncodeLevel == "LowercaseLevelEncoder" && global.GVA_CONFIG.Zap.Format == "console": // console小写编码器
 		config.EncodeLevel = zapcore.LowercaseLevelEncoder
-	case global.GVA_CONFIG.Zap.EncodeLevel == "LowercaseLevelEncoder" && global.GVA_CONFIG.Zap.Format == "json" : // json小写编码器
+	case global.GVA_CONFIG.Zap.EncodeLevel == "LowercaseLevelEncoder" && global.GVA_CONFIG.Zap.Format == "json": // json小写编码器
 		config.EncodeLevel = zapcore.LowercaseLevelEncoder
 	case global.GVA_CONFIG.Zap.EncodeLevel == "LowercaseColorLevelEncoder" && global.GVA_CONFIG.Zap.Format == "console": // console小写编码器带颜色
 		config.EncodeLevel = zapcore.LowercaseColorLevelEncoder
