@@ -1,17 +1,17 @@
-# Gin-Vue-Admin Global Configuration
+# 项目的全局配置
 
-# casbin configuration
+# casbin 框架配置
 casbin:
   model-path: './resource/rbac_model.conf'
 
-# jwt configuration
+# jwt 配置
 jwt:
   signing-key: 'qmPlus'
 
-# mysql connect configuration
+# mysql 连接配置
 mysql:
   username: root
-  password: 'Aa@6447985'
+  password: '$msr=hsx%'
   path: '127.0.0.1:3306'
   db-name: 'qmPlus'
   config: 'charset=utf8mb4&parseTime=True&loc=Local'
@@ -19,7 +19,7 @@ mysql:
   max-open-conns: 10
   log-mode: false
 
-# Postgresql connect configuration
+# Postgresql 连接配置
 postgresql:
   username: 'gorm'
   password: 'gorm'
@@ -31,7 +31,7 @@ postgresql:
   logger: false
   prefer-simple-protocol: true
 
-# sqlite connect configuration
+# sqlite连接配置
 # sqlite需要gcc支持 windows用户需要自行安装gcc
 sqlite:
   # path: 'file::memory:?cache=shared' # 内存模式
@@ -40,7 +40,7 @@ sqlite:
   max-open-conns: 10
   logger: true
 
-# Sqlserver connect configuration
+# Sqlserver 连接配置
 sqlserver:
   username: 'gorm'
   password: 'LoremIpsum86'
@@ -64,27 +64,27 @@ qiniu:
   bucket: 'qm-plus-img'
   img-path: 'http://qmplusimg.henrongyi.top'
 
-# redis configuration
+# redis的配置
 redis:
   addr: '127.0.0.1:6379'
   password: ''
   db: 0
 
-# system configuration
+# 项目配置
 system:
   use-multipoint: false
   env: 'public'  # Change to "develop" to skip authentication for development mode
   addr: 8888
-  db-type: "mysql"  # support mysql/postgresql/sqlite/sqlserver
-  need-init-data: false
+  db-type: "mysql"  # 使用的数据库类型 mysql/postgresql/sqlite/sqlserver
+  need-init-data: true
 
-# captcha configuration
+# 验证码属性配置
 captcha:
   key-long: 6
   img-width: 240
   img-height: 80
 
-# logger configuration
+# 日志配置
 log:
   prefix: '[GIN-VUE-ADMIN]'
   log-file: true
@@ -106,6 +106,7 @@ zap:
   stacktrace_key: 'stacktrace'
   log_in_console: true
 
+# 邮箱配置
 email:
   email_from: 'xxx@163.com'
   email_nick_name: 'test'
